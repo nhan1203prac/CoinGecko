@@ -14,7 +14,7 @@ services:
       - appnet
 
   gateway:
-    build: ./gateway
+    build: ./api-gateway
     container_name: gateway
     ports:
       - "8000:8000"
@@ -27,7 +27,7 @@ services:
       - appnet
 
   ingestion:
-    build: ./ingestion
+    build: ./ingestion-service
     container_name: ingestion
     ports:
       - "5001:5001"
@@ -37,7 +37,7 @@ services:
       - appnet
 
   analysis:
-    build: ./analysis
+    build: ./analysis-service
     container_name: analysis
     ports:
       - "5002:5002"
@@ -47,7 +47,7 @@ services:
       - appnet
 
   prediction:
-    build: ./prediction
+    build: ./prediction-service
     container_name: prediction
     ports:
       - "5003:5003"
@@ -57,7 +57,7 @@ services:
       - appnet
 
   clustering:
-    build: ./clustering
+    build: ./clustering-service
     container_name: clustering
     ports:
       - "5004:5004"
